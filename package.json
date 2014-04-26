@@ -1,6 +1,6 @@
 {
   "name": "krakenjs-mailer",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Nodemailer and dust template integration",
   "contributors": [
     {
@@ -10,8 +10,8 @@
   ],
   "main": "./lib/krakenjs-mailer",
   "scripts": {
-    "postinstall" : "scripts/postinstall.js",
-    "test": "test/test.js"
+    "postinstall" : "node scripts/postinstall.js",
+    "test": "mocha test/test.js"
   },
   "repository": {
     "type": "git",
@@ -29,7 +29,6 @@
   },
   "homepage": "https://github.com/jzumbrun/krakenjs-mailer",
   "dependencies": {
-    "nodemailer": "0.6.x",
     "lodash": "~0.9.2"
   },
   "devDependencies": {

@@ -26,9 +26,9 @@ path = require('path');
 function PostInstall(){
 	var self = this;
 	
-	self.root = path.resolve('.');
+	self.root = path.join(__dirname, '../../../');
 	self.config = self.root + '/config/mail.json';
-	self.template_dir = self.root + '/public/templates/mails';
+	self.template_dir = self.root + '/public/templates/mail';
 
 	var __construct = function(){
 	};
