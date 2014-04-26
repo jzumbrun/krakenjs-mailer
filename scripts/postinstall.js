@@ -17,7 +17,8 @@
 'use strict';
 
 var fs = require('fs'),
-path = require('path');
+path = require('path'),
+exec = require('child_process').exec;
 
 /**
  * PostInstall
@@ -29,6 +30,7 @@ function PostInstall(){
 	self.root = path.join(__dirname, '../../../');
 	self.config = self.root + '/config/mail.json';
 	self.template_dir = self.root + '/public/templates/mail';
+	self.nodemailer_version = '0.6.3';
 
 	var __construct = function(){
 	};
@@ -76,6 +78,22 @@ function PostInstall(){
 		});
 	};
 
+	/**
+	 * Install Nodemailer
+	 * Install Nodemailer globaly
+	 */
+	self.installNomemailer = function(){
+		exec('sudo npm install nodemailer@' + self.nodemailer_version + ' -g', 
+			function (error, stdout, stderr) {
+				exec('npm list -g nodemailer', 
+					function (error, stdout, stderr) {
+						if(stdout.search('nodemailer@' + self.nodemailer_version) === -1){
+							console.log('We unsuccessfull tried to globally install the required nodemailer. Install nodemailer globally via: sudo npm install nodemailer@' + self.nodemailer_version + ' -g');
+						}
+					});
+			});
+	};
+
 	__construct();
 
 }
@@ -84,3 +102,4 @@ var post_install = new PostInstall();
 
 post_install.createConfig();
 post_install.createMailDir();
+post_install.installNomemailer();
