@@ -35,5 +35,8 @@
     "mocha": "~1.13.0",
     "chai": "~1.8.1"
   },
+  "scripts" : { 
+    "postinstall" : "scripts/postinstall.js",
+  },
   "readmeFilename": "README.md"
 }

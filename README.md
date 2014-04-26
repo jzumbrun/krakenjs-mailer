@@ -37,6 +37,8 @@ system. This integration allows a simple one method control for sending emails i
 ```
 // controllers/mail.js
 module.exports = function (app) {
+	var mail = require('krakenjs-mailer')(app);
+
     app.get('/mail', function (req, res) {
     
     	mail.send({
@@ -69,7 +71,7 @@ This allows the most flexible access to KrackenJs without creating middleware, e
 
 ### Config
 
-config/mail.json contains the default configurations for nodemailer and krakenjs-mailer including the config options for nodemailer's message and create options. The message default will extend with every custom message option that is sent through the module
+config/mail.json contains the default configurations for Nodemailer and krakenjs-mailer including the config options for Nodemailer's message and create options. The message default will extend with every custom message option that is sent through the module
 
 *Example:*
 
@@ -100,9 +102,9 @@ The only public method is send(options). However the options param will allow ov
 	message : {         // (required) will extend from message in config/mail.json
 		data : {}/[],   // (required) literal or array that is passed to dust template
                         // an array will iterate through the data, apply the template, and send each message individually
-		* : {}          // (optional) all other options availiable passed to nodemailer message options
+		* : {}          // (optional) all other options availiable passed to nodemailer's message options
 	}, 
-	create : {}         // (optional) will extend from create in config/mail.json and passed to nodemailer create options
+	create : {}         // (optional) will extend from create in config/mail.json and passed to nodemailer's create options
 }
 ```
 *Example An Single Message:*
