@@ -1,6 +1,6 @@
 {
-  "name": "krakenjs-mail",
-  "version": "0.0.1",
+  "name": "krakenjs-mailer",
+  "version": "0.0.5",
   "description": "Nodemailer and dust template integration",
   "contributors": [
     {
@@ -8,13 +8,13 @@
       "email": "jzumbrun@gmail.com"
     }
   ],
-  "main": "./lib/dust",
+  "main": "./lib/krakenjs-mailer",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/jzumbrun/krakenjs-mail"
+    "url": "http://github.com/jzumbrun/krakenjs-mailer"
   },
   "keywords": [
     "kraken",
@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/jzumbrun/krakenjs-mail/issues"
   },
-  "homepage": "https://github.com/jzumbrun/krakenjs-mail",
+  "homepage": "https://github.com/jzumbrun/krakenjs-mailer",
   "dependencies": {
     "nodemailer": "0.6.x",
     "lodash": "~0.9.2"
