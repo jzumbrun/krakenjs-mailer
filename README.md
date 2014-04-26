@@ -32,6 +32,11 @@ system. This integration allows a simple one method control for sending emails i
     ```
 5. Profit
 
+**NOTE** We try to install Nodemailer globally, however if the console output mentions it was not installed, please install it via
+```
+sudo npm install nodemailer -g
+```
+
 *Example: Full Controller*
 
 ```
