@@ -1,6 +1,6 @@
 {
   "name": "krakenjs-mailer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Nodemailer and dust template integration",
   "contributors": [
     {
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/jzumbrun/krakenjs-mailer",
   "dependencies": {
-    "lodash": "~0.9.2"
+    "lodash": "~2.4.1"
   },
   "devDependencies": {
     "mocha": "~1.13.0",
