@@ -10,7 +10,8 @@
   ],
   "main": "./lib/krakenjs-mailer",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall" : "scripts/postinstall.js",
+    "test": "test/test.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,7 @@
   "author": "}else{ elseblock.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jzumbrun/krakenjs-mail/issues"
+    "url": "https://github.com/jzumbrun/krakenjs-mailer/issues"
   },
   "homepage": "https://github.com/jzumbrun/krakenjs-mailer",
   "dependencies": {
@@ -34,9 +35,6 @@
   "devDependencies": {
     "mocha": "~1.13.0",
     "chai": "~1.8.1"
-  },
-  "scripts" : { 
-    "postinstall" : "scripts/postinstall.js",
   },
   "readmeFilename": "README.md"
 }
